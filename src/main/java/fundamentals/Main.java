@@ -20,9 +20,12 @@ public class Main {
         System.out.println("y1="+tasksExercises1.y);
         System.out.println("x2="+tasksExercises2.x);
         System.out.println("y2="+tasksExercises2.y);
+
 //// task1
 //           tasksExercises.circlePerimeter();
 //        TasksExercises.circlePerimeter();
 //        System.out.println(tasksExercises.x);
+ //       task2
+        TasksExercises.bodyMassIndex();
     }
 }
