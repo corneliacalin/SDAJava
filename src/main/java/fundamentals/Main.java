@@ -26,6 +26,10 @@ public class Main {
 //        TasksExercises.circlePerimeter();
 //        System.out.println(tasksExercises.x);
  //       task2
-        TasksExercises.bodyMassIndex();
+//        TasksExercises.bodyMassIndex();
+        //Task 3
+        TasksExercises.fizzBuzz();
+        TasksExercises.primeNumber();
+        TasksExercises.fibonacciNumber();
     }
 }
