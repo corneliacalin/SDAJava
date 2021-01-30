@@ -33,6 +33,10 @@ public class Main {
 //        TasksExercises.fibonacciNumber();
         //task4
  //   TasksExercises.sumDigitNumber();
-        TasksExercises.logestWord2();
+ //       TasksExercises.logestWord2();
+//       TasksExercises.countSpace();
+//        TasksExercises.stutters();
+//        TasksExercises.countCharBetween2c();
+        TasksExercises.longestIncreasing();
     }
 }

@@ -189,6 +189,86 @@ public class TasksExercises {
         }
         System.out.println("Cuvantul cel mai lung este " + longestWord1);
     }
+
+    // 	Write an application that reads a text from the user
+// (type String) and counts a percentage of occurrences of a space character.
+    public static void countSpace() {
+        String text = "";
+        int counter = 0;
+        System.out.println("Type a text: ");
+        Scanner scanner = new Scanner(System.in);
+        text = scanner.nextLine();
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            if (ch == ' ') {
+                counter++;
+            }
+        }
+
+        System.out.println("Space character appears " + counter + " times in " + text.length() + "characters, that represent " + ((float) counter / text.length()) * 100 + "%"); // De Ex daca pun float inainte de counter,  la textul introdus de mine procentul e 10.526316, dar daca nu pun float rezultatul este zero. Nu inteleg de ce nu afiseaza 10
+    }
+
+    //    	Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each
+//    	word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test".
+    public static void stutters() {
+        String suttersText = "";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti nr de cuvinte ");
+        int noWords = scanner.nextInt();
+        String[] text = new String[noWords];
+        System.out.println("Type a textul ");
+        for (int i = 0; i < noWords; i++) {
+            text[i] = scanner.next();
+            suttersText = suttersText + text[i] + " " + text[i] + " ";
+        }
+        System.out.println(suttersText);
+
+    }
+
+    //	Write an application that reads two lowercase letters of the Latin alphabet (type char) and calculates how
+// many characters is there in the alphabet between given letters. Hint - use the ASCII code table and treat the
+// characters as int numbers.
+    public static void countCharBetween2c() {
+        char a1 = ' ';
+        char a2 = ' ';
+        int count = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type a lower character:");
+        a1 = scanner.next().charAt(0);
+        System.out.println("Type the second lowercase character: ");
+        a2 = scanner.next().charAt(0);
+        for (char i = a1; i < a2; i++) {
+            count = count + 1;
+        }
+        System.out.println("Between " + a1 + " and " + a2 + " there are " + count + " characters");
+    }
+//	Write an application that takes 10 numbers from the user (type int) and write the length of the
+//	longest such subsequence of these numbers, which is increasing. For example, for the numbers:
+//	"1, 3, 8, 4, 2, 5, 6, 11, 13, 7" the program should write "5" as the length of the longest increasing
+//	subsequence (underlined in the example).
+    public static void longestIncreasing() {
+        int[] number = new int[10];
+        int longestSubsequence = 0;
+        int subsequence = 0;
+        System.out.printf("Type 10 integer numbers ");
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+            number[i] = scanner.nextInt();
+        }
+        for (int i = 1; i < 10; i++) {
+            if (number[i] > number[i - 1]) {
+                subsequence++;
+                if (longestSubsequence < subsequence) {
+                    longestSubsequence = subsequence;
+
+                }
+            } else {
+                subsequence = 1;
+            }
+        }
+        System.out.printf("The longest subsequence witch is increasing " + longestSubsequence);
+
+    }
 }
 
 
