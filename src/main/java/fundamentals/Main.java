@@ -32,6 +32,7 @@ public class Main {
 //        TasksExercises.primeNumber();
 //        TasksExercises.fibonacciNumber();
         //task4
-    TasksExercises.sumDigitNumber();
+ //   TasksExercises.sumDigitNumber();
+        TasksExercises.logestWord2();
     }
 }

@@ -66,29 +66,30 @@ public class TasksExercises {
             }
         }
     }
-//    Write an application that takes a positive number from the user (type int)
+
+    //    Write an application that takes a positive number from the user (type int)
 //    and prints all prime numbers greater than 1 and less than the given number
     public static void primeNumber() {
-        Scanner scanner =new Scanner(System.in);
-        int number =scanner.nextInt();
-        String primeNumber="";
-        int c=0;
-        for (int i=2; i<number; i++){
-            c=0;
-            for (int k=2; k<=i/2; k++) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        String primeNumber = "";
+        int c = 0;
+        for (int i = 2; i < number; i++) {
+            c = 0;
+            for (int k = 2; k <= i / 2; k++) {
                 if (i % k == 0) {
                     c++;
                 }
             }
-            if (c==0) {
+            if (c == 0) {
                 primeNumber = primeNumber + i + " ";
             }
 
 
- }
+        }
         System.out.println("Prime numbers greater than 1 and less than" + number + " are ");
         System.out.println(primeNumber);
-        }
+    }
 //
 //Write an application that will take a positive number from the user (type int)
 //    and calculate the Fibonacci number at the indicated index. For example, if the number equals 5,
@@ -96,38 +97,99 @@ public class TasksExercises {
 //    sum of the two preceding ones
 
     public static void fibonacciNumber() {
-        Scanner scanner =new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Give a positive number: ");
-        int number=scanner.nextInt();
-        long fib[] =new long[number+2];
-        fib[0]=0;
-        fib[1]=1;
-        for (int i=2; i<=number;i++){
-            fib[i]=fib[i-1]+fib[i-2];
+        int number = scanner.nextInt();
+        long fib[] = new long[number + 2];
+        fib[0] = 0;
+        fib[1] = 1;
+        for (int i = 2; i <= number; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
 
         }
 
-        System.out.println("The number from Fibonacci sequence with index " + number + " is " +fib[number]);
+        System.out.println("The number from Fibonacci sequence with index " + number + " is " + fib[number]);
 
     }
-//    Write an application that gets one positive number (type int) from the user and
+
+    //    Write an application that gets one positive number (type int) from the user and
 //    calculates a sum of digits of the given number. Hint: to make some operations on every
 //    single digit of the number (digit by digit), you can calculate the remainder of dividing
 //    the number by 10 (to get the value of the last digit) and divide the number by 10 (to "move" to the next digit).
-    public static void sumDigitNumber(){
+    public static void sumDigitNumber() {
         System.out.println("Give a positive integer number: ");
-        Scanner scanner =new Scanner(System.in);
-                int number = scanner.nextInt();
-        int aux=number;
-        int sum=0;
-        while (aux!=0) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int aux = number;
+        int sum = 0;
+        while (aux != 0) {
             sum = sum + aux % 10;
             aux = aux / 10;
         }
         System.out.println("Sum of digits of number " + number + " is " + sum);
-        }
-
     }
+
+    //    Write an application that will read texts (variables of the
+//    String type) until the user gives the text "Enough!" and then
+//    writes the longest of the given texts (not including the text
+//    "Enough!"). If the user does not provide any text, write
+//    "No text provided".
+    public static void logestWord() {
+        System.out.println("Type a text at end write enough: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord1 = "";
+
+        do {
+            word = scanner.next();
+            if (longestWord1.length() < word.length() && !word.equals("Enough!")) {
+                longestWord1 = word;
+            }
+        } while (!word.equals("Enough!"));
+        if (longestWord1.length() == 0) {
+            System.out.println("No text provides");
+            return;
+        }
+        System.out.println("Cuvantul cel mai lung este " + longestWord1);
+    }
+
+    public static void logestWord1() {
+        System.out.println("Type a text at end write enough: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord1 = "";
+
+        do {
+            word = scanner.next();
+            if (!word.equals("Enough!") && longestWord1.length() < word.length()) {
+                longestWord1 = word;
+            }
+        } while (!word.equals("Enough!"));
+        if (longestWord1.length() == 0) {
+            System.out.println("No text provides");
+            return;
+        }
+        System.out.println("Cuvantul cel mai lung este " + longestWord1);
+    }
+
+    public static void logestWord2() {
+        System.out.println("Type a text at end write enough: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord1 = "";
+        while (!word.equals("Enough!")) {
+            if (longestWord1.length() < word.length()) {
+                longestWord1 = word;
+            }
+            word = scanner.next();
+        }
+        if (longestWord1.length() == 0) {
+            System.out.println("No text provides");
+            return;
+        }
+        System.out.println("Cuvantul cel mai lung este " + longestWord1);
+    }
+}
 
 
 
