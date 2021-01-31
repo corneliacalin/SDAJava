@@ -273,7 +273,7 @@ public class TasksExercises {
         int[] number = new int[10];
         int longestSubsequence = 0;
         int subsequence = 0;
-        System.out.printf("Type 10 integer numbers ");
+        System.out.println("Type 10 integer numbers ");
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 10; i++) {
             number[i] = scanner.nextInt();
@@ -289,7 +289,7 @@ public class TasksExercises {
                 subsequence = 1;
             }
         }
-        System.out.printf("The longest subsequence witch is increasing " + longestSubsequence);
+        System.out.println("The longest subsequence witch is increasing " + longestSubsequence);
 
     }
     public void testObjects(){
