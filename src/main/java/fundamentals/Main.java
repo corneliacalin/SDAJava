@@ -37,6 +37,10 @@ public class Main {
 //       TasksExercises.countSpace();
 //        TasksExercises.stutters();
 //        TasksExercises.countCharBetween2c();
-        TasksExercises.longestIncreasing();
+//        TasksExercises.longestIncreasing();
+//        TasksExercises.stutters1();
+//        TasksExercises.testString();
+        TasksExercises tasksExercises1= new TasksExercises();
+        tasksExercises1.testObjects();
     }
 }

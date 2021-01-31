@@ -225,6 +225,28 @@ public class TasksExercises {
 
     }
 
+    //    	Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each
+//    	word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test".
+    public static void stutters1() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduceti textul ");
+        String text = scanner.nextLine();
+        String[] words=text.split(" ");
+        for (int i=0; i<words.length;i++){
+            System.out.print(words[i]+" "+ words[i] + " ");
+        }
+
+    }
+    // test string
+    public static void testString(){
+        String s1="abc";
+        String s2="abc";
+        String s3=new String ("abc");
+        System.out.println(s1==s2);
+        System.out.println(s1==s3);
+        System.out.println(s1.equals(s3));
+    }
+
     //	Write an application that reads two lowercase letters of the Latin alphabet (type char) and calculates how
 // many characters is there in the alphabet between given letters. Hint - use the ASCII code table and treat the
 // characters as int numbers.
@@ -242,7 +264,8 @@ public class TasksExercises {
         }
         System.out.println("Between " + a1 + " and " + a2 + " there are " + count + " characters");
     }
-//	Write an application that takes 10 numbers from the user (type int) and write the length of the
+
+    //	Write an application that takes 10 numbers from the user (type int) and write the length of the
 //	longest such subsequence of these numbers, which is increasing. For example, for the numbers:
 //	"1, 3, 8, 4, 2, 5, 6, 11, 13, 7" the program should write "5" as the length of the longest increasing
 //	subsequence (underlined in the example).
@@ -268,6 +291,16 @@ public class TasksExercises {
         }
         System.out.printf("The longest subsequence witch is increasing " + longestSubsequence);
 
+    }
+    public void testObjects(){
+        Dog dog1 =new Dog( "Azorel");
+
+ //       dog1.setName("Azorel");
+        Dog dog2 =new Dog("Azorel");
+//        dog2.setName("Azorel");
+        System.out.println(dog1==dog2);
+        System.out.println((dog1.equals(dog2)));
+        System.out.println(dog1.getName().equals(dog2.getName()));
     }
 }
 
