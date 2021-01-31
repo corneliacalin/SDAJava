@@ -1,6 +1,7 @@
 package fundamentals.oop;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * b.	Client  which consists of:
@@ -41,10 +42,15 @@ public class Client {
         this.bankAccount = new BankAccount();
     }
 
+    @Override
     public String toString() {
-        return "Name= " + this.name + " , Cnp= " + this.cnp + " ,BankAccount= " + this.bankAccount;
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", cnp='" + cnp + '\'' +
+                ", bankAccount=" + bankAccount +
+                ", bankAccounts=" + Arrays.toString(bankAccounts) +
+                '}';
     }
-
 
     public String getName() {
         return name;

@@ -37,6 +37,7 @@ BankAccount bankAccount=new BankAccount();
         client1.setBankAccounts(banksArray);
         System.out.println(banksArray[0]);
         System.out.println("Primul cont din array" + client1.getBankAccounts()[0]);
+            System.out.println(client1);
 
     }
 }
