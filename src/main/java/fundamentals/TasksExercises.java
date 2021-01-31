@@ -67,6 +67,29 @@ public class TasksExercises {
         }
     }
 
+    public static void fizzBuzz1() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a positive int number");
+        int number = scanner.nextInt();
+        for (int i = 1; i <= number; i++) {
+            if (i % 3 == 0 && i % 7 == 0) {
+                System.out.println("Fizz Buzz");
+                continue;
+            }
+            if (i % 3 == 0) {
+                System.out.println("Fizz");
+                continue;
+            }
+            if (i % 7 == 0) {
+                System.out.println("Buzz");
+                continue;
+            }
+            System.out.println(i);
+
+        }
+    }
+
     //    Write an application that takes a positive number from the user (type int)
 //    and prints all prime numbers greater than 1 and less than the given number
     public static void primeNumber() {
@@ -128,6 +151,23 @@ public class TasksExercises {
         }
         System.out.println("Sum of digits of number " + number + " is " + sum);
     }
+
+
+    //print prime numbers greater from 1 less than number
+    public static void printAllPrimeNumbers() {
+        System.out.println("Give an positive integer number: ");
+        Scanner scanner = new Scanner(System.in);
+        int newNumber = scanner.nextInt();
+        if (newNumber <= 1) {
+            System.out.println("The number is not greater than 1 ");
+            return;
+        }
+        for (int i = 2; i < newNumber; i++) {
+            if (isPrime2(i)) {
+                System.out.println("Numarul " + i + "este prim ");
+            }
+        }
+
 
     //    Write an application that will read texts (variables of the
 //    String type) until the user gives the text "Enough!" and then
@@ -301,6 +341,44 @@ public class TasksExercises {
         System.out.println(dog1==dog2);
         System.out.println((dog1.equals(dog2)));
         System.out.println(dog1.getName().equals(dog2.getName()));
+    }
+}
+
+    private static boolean isPrime(int nr) {
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                //             System.out.println("rest " + nr % i);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isPrime1(int nr) {
+        boolean isPrimeNo = true;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                //             System.out.println("rest " + nr % i);
+                isPrimeNo = false;
+                break;
+            }
+        }
+        return isPrimeNo;
+    }
+
+    private static boolean isPrime2(int nr) {
+        if (nr == 2) {
+            return true;
+        }
+        if (nr == 1 || nr == 0 || nr % 2 == 0) {
+            return false;
+        }
+        for (int i = 3; i * i <= nr; i += 2) {
+            if (nr % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

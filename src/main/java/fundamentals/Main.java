@@ -25,12 +25,18 @@ public class Main {
 //           tasksExercises.circlePerimeter();
 //        TasksExercises.circlePerimeter();
 //        System.out.println(tasksExercises.x);
- //       task2
+//       task2
 //        TasksExercises.bodyMassIndex();
-        //Task 3
-//        TasksExercises.fizzBuzz();
+// Task 3
+//       TasksExercises.fizzBuzz1();
 //        TasksExercises.primeNumber();
 //        TasksExercises.fibonacciNumber();
+
+// task4
+//   TasksExercises.sumDigitNumber();
+        TasksExercises.printAllPrimeNumbers();
+
+
         //task4
  //   TasksExercises.sumDigitNumber();
  //       TasksExercises.logestWord2();
@@ -42,5 +48,6 @@ public class Main {
 //        TasksExercises.testString();
         TasksExercises tasksExercises1= new TasksExercises();
         tasksExercises1.testObjects();
+
     }
 }
