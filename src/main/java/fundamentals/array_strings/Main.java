@@ -11,7 +11,8 @@ public class Main {
 //        ArrayExercises.duplicatValue();
 //        ArrayExercises.charReturn();
 //        ArrayExercises.containString1();
-        ArrayExercises.changeUpperFistLetter();
+//        ArrayExercises.changeUpperFistLetter();
+        ArrayExercises.compareTwoText();
 
     }
 

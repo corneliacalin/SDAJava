@@ -155,4 +155,18 @@ public class ArrayExercises {
         System.out.println("Textul nou este: " + finalString);
 
     }
+
+    // Write a Java program to compare 2 strings ignoring case consideration.  (e.g: “Dog” is equal to “dOG”)
+    public static void compareTwoText() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Type the first text : ");
+        String text1 = scanner.nextLine();
+        System.out.print("Type the second text: ");
+        String text2 = scanner.nextLine();
+        if (text1.equalsIgnoreCase(text2)) {
+            System.out.println("The text are the same ignoring case");
+            return;
+        }
+        System.out.println("The text aren't the same ignoring case");
+    }
 }
