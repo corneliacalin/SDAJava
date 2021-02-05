@@ -140,4 +140,19 @@ public class ArrayExercises {
 
 
     }
+
+    // 	Write a Java program to uppercase first letter of every word in a text(string).
+    public static void changeUpperFistLetter() {
+        String finalString = "";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduceti textul: ");
+        String text = scanner.nextLine();
+        String[] words = text.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
+            finalString = finalString + words[i] + " ";
+        }
+        System.out.println("Textul nou este: " + finalString);
+
+    }
 }

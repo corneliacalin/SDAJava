@@ -10,7 +10,9 @@ public class Main {
 //        ArrayExercises.theSecondMax();
 //        ArrayExercises.duplicatValue();
 //        ArrayExercises.charReturn();
-        ArrayExercises.containString1();
+//        ArrayExercises.containString1();
+        ArrayExercises.changeUpperFistLetter();
+
     }
 
 
