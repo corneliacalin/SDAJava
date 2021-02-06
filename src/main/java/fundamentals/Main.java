@@ -1,8 +1,6 @@
 package fundamentals;
 
-import javafx.concurrent.Task;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -33,7 +31,7 @@ public class Main {
 //        TasksExercises.fibonacciNumber();
         //task4
  //   TasksExercises.sumDigitNumber();
- //       TasksExercises.logestWord2();
+       TasksExercises.logestWord2();
 //       TasksExercises.countSpace();
 //        TasksExercises.stutters();
 //        TasksExercises.countCharBetween2c();

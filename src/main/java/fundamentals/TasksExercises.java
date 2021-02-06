@@ -1,6 +1,6 @@
 package fundamentals;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class TasksExercises {
